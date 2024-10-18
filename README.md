@@ -1,2 +1,2 @@
-# node-api-challenge
+# typescript-api-challenge
 Technical test for selection process
