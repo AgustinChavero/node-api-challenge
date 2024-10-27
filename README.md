@@ -1,29 +1,35 @@
-# Node + Fastify + TypeScript + MongoDB Atlas + Mongoose + Jest:
+<p align="center">
+  <img src="https://nodejs.org/static/images/logo.svg" alt="Node.js Logo" width="200"/>
+</p>
 
-### Guia
+<p align="center">
+  Node + Fastify + TypeScript + MongoDB Atlas + Mongoose + Jest:
+</p>
+
+### Guide
 
 #### Docs-arquitecture.text
 
-`Se encuentra la arquitectura del proyecto y la explicacion de donde van los archivos y que hacen`
+`Contains the project architecture and explains where the files are located and their purpose.`
 
 #### Docs-starswars.postman_collection
 
-`Se encuentran para importar todos los endpoints del proyecto`
+`Contains all project endpoints for import.`
 
-#### Instalacion de dependencias
+#### Dependency Installation
 
-`Parado en la carpeta raiz, ejecutar:`
+`From the root folder, run:`
 
                 npm i
 
-#### Inicializacion de la APIRest
+#### API Rest Initialization
 
-`Parado en la carpeta raiz, ejecutar:`
+`From the root folder, run:`
 
                 npm run dev
 
-#### Ejecucion de los tests
+#### Running Tests
 
-`Parado en la carpeta raiz, y con el backend encendido, ejecutar`
+`From the root folder, with the backend running, execute:`
 
                 npm test
