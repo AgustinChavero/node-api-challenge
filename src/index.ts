@@ -1,7 +1,7 @@
 import fastify, { FastifyInstance } from "fastify";
 import connectDatabase from "./database/connect-database";
 import { syncData } from "./database/sync-data";
-import { errorHandler } from "./services/global-errors/custom-error";
+import { errorHandler } from "./utils/global-errors/custom-error";
 
 import filmRoute from "./modules/film/film-route";
 import peopleRoutes from "./modules/people/people-route";

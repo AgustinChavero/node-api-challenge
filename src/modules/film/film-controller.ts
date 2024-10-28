@@ -1,8 +1,8 @@
 import { FastifyRequest, FastifyReply } from "fastify";
 import Film from "./film-schema";
 import { NewFilm } from "./film-interface";
-import { errorResponse } from "../../services/global-errors/custom-error";
-import { customResponse } from "../../services/global-errors/custom-response";
+import { errorResponse } from "../../utils/global-errors/custom-error";
+import { customResponse } from "../../utils/global-errors/custom-response";
 
 import {
   createElement,
@@ -10,8 +10,8 @@ import {
   findAllElement,
   findElement,
   updateElement,
-} from "../../services/global-functions/global-service";
-import { bodyValidation } from "../../services/global-validations/global-validation";
+} from "../../utils/global-functions/global-service";
+import { bodyValidation } from "../../utils/global-validations/global-validation";
 import { bodyDTO } from "./film-dto";
 
 export const postFilm = async (

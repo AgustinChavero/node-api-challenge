@@ -1,8 +1,8 @@
 import { FastifyRequest, FastifyReply } from "fastify";
 import People from "./people-schema";
 import { NewPeople } from "./people-interface";
-import { errorResponse } from "../../services/global-errors/custom-error";
-import { customResponse } from "../../services/global-errors/custom-response";
+import { errorResponse } from "../../utils/global-errors/custom-error";
+import { customResponse } from "../../utils/global-errors/custom-response";
 
 import {
   createElement,
@@ -10,8 +10,8 @@ import {
   findAllElement,
   findElement,
   updateElement,
-} from "../../services/global-functions/global-service";
-import { bodyValidation } from "../../services/global-validations/global-validation";
+} from "../../utils/global-functions/global-service";
+import { bodyValidation } from "../../utils/global-validations/global-validation";
 import { bodyDTO } from "./people-dto";
 
 export const postPeople = async (

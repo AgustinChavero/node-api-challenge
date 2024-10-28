@@ -1,8 +1,8 @@
 import { FastifyRequest, FastifyReply } from "fastify";
 import Starship from "./starship-schema";
 import { NewStarship } from "./starship-interface";
-import { errorResponse } from "../../services/global-errors/custom-error";
-import { customResponse } from "../../services/global-errors/custom-response";
+import { errorResponse } from "../../utils/global-errors/custom-error";
+import { customResponse } from "../../utils/global-errors/custom-response";
 
 import {
   createElement,
@@ -10,8 +10,8 @@ import {
   findAllElement,
   findElement,
   updateElement,
-} from "../../services/global-functions/global-service";
-import { bodyValidation } from "../../services/global-validations/global-validation";
+} from "../../utils/global-functions/global-service";
+import { bodyValidation } from "../../utils/global-validations/global-validation";
 import { bodyDTO } from "./starship-dto";
 
 export const postStarship = async (
@@ -53,7 +53,8 @@ export const getAllStarship = async (
   const data: NewStarship = req.query;
 
   const starships = await findAllElement(data, Starship);
-  if (!starships.length) return errorResponse(reply, 409, "Starships not found");
+  if (!starships.length)
+    return errorResponse(reply, 409, "Starships not found");
 
   customResponse(reply, 200, { message: "Starships founded", starships });
 };
